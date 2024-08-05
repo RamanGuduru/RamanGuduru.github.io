@@ -96,28 +96,35 @@ main h1{
 .tit{
     margin: 0;
     height:35vh;
-    width:1vh;
+    width:3vh;
     border:black solid 0.1rem;
     writing-mode: vertical-lr;
     text-orientation: upright;
     padding:2rem;
 }
+.dwrap{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:42vh;
+    border-radius: 0.5rem;
 .desc{
     overflow: hidden;
-    margin: 0;
-    height:35vh;
     width:0;
     padding:0px;
     opacity: 1;
-    text-align: center;
     color: black;
     transition: width 500ms , opacity 600ms;
 }
-.project:focus .desc{
+}
+.project:focus .dwrap{
+    background-color: #F6C90E;
+    border:black solid;
+    .desc{
     width:20vh;
     opacity: 1;
-    padding: 2rem;
-    border:black solid;
+    }
 }
 .project:focus .tit{
     background-color: #303841;
@@ -141,7 +148,8 @@ footer{
     cursor: pointer; 
     padding: 15px;
     border-radius: 10px; 
-    font-size: 18px; 
+    font-size: 18px;
+    opacity: 0.6;
 }
 footer a{
     background-color: #F6C90E;
